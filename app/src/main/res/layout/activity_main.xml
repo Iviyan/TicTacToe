@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvXScoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Крестик"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/separator1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvXScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="0"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvXScoreLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvXScoreLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvXScoreLabel" />
+
+    <View
+        android:id="@+id/separator1"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/tvXScore"
+        app:layout_constraintEnd_toStartOf="@id/tvTieScoreLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvXScoreLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvXScoreLabel" />
+
+    <TextView
+        android:id="@+id/tvTieScoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ничья"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/separator2"
+        app:layout_constraintStart_toStartOf="@id/separator1"
+        app:layout_constraintTop_toTopOf="@+id/separator1" />
+
+    <TextView
+        android:id="@+id/tvTieScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTieScoreLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTieScoreLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvXScore" />
+
+    <View
+        android:id="@+id/separator2"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTieScore"
+        app:layout_constraintEnd_toStartOf="@id/tvOScoreLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvTieScoreLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTieScoreLabel" />
+
+    <TextView
+        android:id="@+id/tvOScoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Нолик"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/separator2"
+        app:layout_constraintTop_toTopOf="@+id/separator2" />
+
+    <TextView
+        android:id="@+id/tvOScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvOScoreLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvOScoreLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTieScore" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvXScore" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        app:layout_constraintBottom_toTopOf="@id/btnRestart"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus">
+
+        <TableRow android:layout_weight="1">
+
+            <View
+                android:id="@+id/c11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="1_1" />
+
+            <View
+                android:layout_width="@dimen/separator_width"
+                android:layout_weight="0"
+                android:background="@color/separator_color" />
+
+            <View
+                android:id="@+id/c12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="1_2" />
+
+            <View
+                android:layout_width="@dimen/separator_width"
+                android:layout_weight="0"
+                android:background="@color/separator_color" />
+
+            <View
+                android:id="@+id/c13"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="1_3" />
+        </TableRow>
+
+        <TableRow android:layout_weight="0">
+
+            <View
+                android:layout_height="@dimen/separator_width"
+                android:layout_weight="1"
+                android:background="@color/separator_color" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+
+            <View
+                android:id="@+id/c21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="2_1" />
+
+            <View
+                android:layout_width="@dimen/separator_width"
+                android:layout_weight="0"
+                android:background="@color/separator_color" />
+
+            <View
+                android:id="@+id/c22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="2_2" />
+
+            <View
+                android:layout_width="@dimen/separator_width"
+                android:layout_weight="0"
+                android:background="@color/separator_color" />
+
+            <View
+                android:id="@+id/c23"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="2_3" />
+        </TableRow>
+
+        <TableRow android:layout_weight="0">
+
+            <View
+                android:layout_height="@dimen/separator_width"
+                android:layout_weight="1"
+                android:background="@color/separator_color" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+
+            <View
+                android:id="@+id/c31"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="3_1" />
+
+            <View
+                android:layout_width="@dimen/separator_width"
+                android:layout_weight="0"
+                android:background="@color/separator_color" />
+
+            <View
+                android:id="@+id/c32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="3_2" />
+
+            <View
+                android:layout_width="@dimen/separator_width"
+                android:layout_weight="0"
+                android:background="@color/separator_color" />
+
+            <View
+                android:id="@+id/c33"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/cell_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="3_3" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:text="Заново"
+        android:textSize="20sp"
+        android:theme="@style/Widget.AppCompat.Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

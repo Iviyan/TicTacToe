@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scaleWidth="29%"
+    android:scaleHeight="29%"
+    android:level="1"
+    android:scaleGravity="center">
+    <shape
+        android:shape="oval">
+        <stroke
+            android:width="@dimen/ring_thickness"
+            android:color="#000" />
+    </shape>
+</scale>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cell_margin">2dp</dimen>
+    <dimen name="separator_width">3dp</dimen>
+    <dimen name="ring_thickness">4dp</dimen>
+    <dimen name="cross_thickness">4dp</dimen>
+</resources>
